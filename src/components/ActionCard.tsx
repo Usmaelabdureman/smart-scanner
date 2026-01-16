@@ -1,15 +1,14 @@
+import { Ionicons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import {
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
-  type StyleProp,
-  type ViewStyle,
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
+    type StyleProp,
+    type ViewStyle
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../constants/colors';
 
 interface ActionCardProps {

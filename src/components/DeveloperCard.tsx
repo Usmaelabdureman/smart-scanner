@@ -1,15 +1,15 @@
+import { Ionicons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import {
-  Image,
-  type ImageSourcePropType,
-  Linking,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
+    Image,
+    type ImageSourcePropType,
+    Linking,
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../constants/colors';
 
 interface SocialLink {

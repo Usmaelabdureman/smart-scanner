@@ -1,34 +1,34 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  Alert,
-  Linking,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
-} from 'react-native';
-import {
-  CameraView,
-  useCameraPermissions,
-  type BarcodeScanningResult,
-  type BarcodeType,
-} from 'expo-camera';
 import { Ionicons } from '@expo/vector-icons';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
-import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {
+    CameraView,
+    useCameraPermissions,
+    type BarcodeScanningResult,
+    type BarcodeType,
+} from 'expo-camera';
+import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+    Alert,
+    Linking,
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
+} from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { colors } from '../constants/colors';
-import { ScanOverlay } from '../components/ScanOverlay';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { ActionCard } from '../components/ActionCard';
 import { DeveloperCard } from '../components/DeveloperCard';
-import { detectScanFormat } from '../utils/scanUtils';
-import { addToScanHistory } from '../services/storage';
+import { ScanOverlay } from '../components/ScanOverlay';
+import { colors } from '../constants/colors';
 import type { RootStackParamList } from '../navigation/AppNavigator';
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { addToScanHistory } from '../services/storage';
+import { detectScanFormat } from '../utils/scanUtils';
 
 type Nav = NativeStackNavigationProp<RootStackParamList>;
 
